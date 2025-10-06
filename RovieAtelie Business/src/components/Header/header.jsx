@@ -8,19 +8,21 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/">home</Link>
+            <Link to="/Trabalhos">catálogo</Link>
+          </li>
+          <li>
+            <Link to="/Precos">preços</Link>
+          </li>
+          <li>
+            <Link to="/" id="link-home">
+              HOME
+            </Link>
           </li>
           <li>
             <Link to="/Sobre">sobre</Link>
           </li>
           <li>
             <Link to="/Contatos">contatos</Link>
-          </li>
-          <li>
-            <Link to="/Precos">preços</Link>
-          </li>
-          <li>
-            <Link to="/Sobre">sobre</Link>
           </li>
         </ul>
       </nav>

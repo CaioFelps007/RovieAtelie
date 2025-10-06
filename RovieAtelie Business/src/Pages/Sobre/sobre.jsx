@@ -4,7 +4,9 @@ import Header from "../../components/Header/header";
 function Sobre() {
   return (
     <div className="container-landpage">
-      <Header />
+      <div className="section-header">
+        <Header />
+      </div>
 
       <h1>Rovie Sobre</h1>
     </div>
