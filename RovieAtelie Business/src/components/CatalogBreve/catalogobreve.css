@@ -1,0 +1,56 @@
+.container-catalogoland {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+  height: auto;
+  gap: 20px;
+}
+
+.card-catalogoland {
+  width: 30%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.card-catalogoland img {
+  height: auto;
+  width: 80%;
+  border-radius: 15px;
+}
+
+.card-catalogoland h3 {
+  margin: 10px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.card-catalogoland p {
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .container-catalogoland {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+  .card-catalogoland img {
+    height: auto;
+    width: 250%;
+    border-radius: 15px;
+  }
+  .card-catalogoland p {
+    text-align: center;
+    width: 200%;
+  }
+}
