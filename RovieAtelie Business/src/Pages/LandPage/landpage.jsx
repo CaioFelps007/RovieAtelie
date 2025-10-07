@@ -13,7 +13,7 @@ import CatalogBreve from "../../components/CatalogBreve/catalogobreve";
 
 //images
 import RovieAtelieLogo from "../../images/RovieAteliê.png";
-import VilaFlora from "../../images/VilaFlora.png";
+// import VilaFlora from "../../images/VilaFlora.png";
 import divisao from "../../images/DivisaoImage.png";
 import certificado from "../../images/certificado.png";
 
@@ -62,7 +62,7 @@ function Home() {
           </p>
         </div>
         <div className="img-localizacao">
-          <img src={VilaFlora} className="imgVila" />
+          {/* <img src={VilaFlora} className="imgVila" /> */}
         </div>
       </section>
       <section className="Certificados">
