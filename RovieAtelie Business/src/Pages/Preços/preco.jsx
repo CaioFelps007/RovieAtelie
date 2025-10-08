@@ -7,8 +7,9 @@ function Preco() {
       <div className="section-header">
         <Header />
       </div>
-
-      <h1>Rovie Preços</h1>
+      <section className="title-screen">
+        <h1>Rovie Preços</h1>
+      </section>
     </div>
   );
 }

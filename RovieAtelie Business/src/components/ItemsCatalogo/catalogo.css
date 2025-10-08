@@ -1,0 +1,99 @@
+/* CONTAINER: continua flex, quebra de linha e cards com mesma “altura visual” por linha */
+.container-catalogo {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch; /* estica os cards na linha p/ alturas mais uniformes */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* CARD: ~30% em telas grandes, mas com limites pra não ficar minúsculo/monstruoso */
+.card-item-catalogo {
+  /* cresce, encolhe, base preferida ≈30% com limites entre 260px e 420px */
+  flex: 1 1 clamp(260px, 30%, 420px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: burlywood;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  gap: 15px;
+  padding: 16px; /* dá respiro interno */
+  /* height removida: deixa o conteúdo definir a altura */
+}
+
+/* BLOCO DA IMAGEM: ocupa ~40% no desktop */
+.image-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+
+/* IMAGEM: preenche o bloco, sem estourar */
+.image-item {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover; /* caso use altura/ratio no futuro */
+  border: 3px solid white;
+}
+
+/* TEXTO: pega o restante do espaço */
+.text-item-catalogo {
+  flex: 1;
+  min-width: 0; /* evita quebra esquisita de texto */
+  background-color: rgb(189, 152, 104);
+  border-radius: 20px;
+  height: 170px;
+  box-shadow: inset 0 8px 20px rgba(0, 0, 0, 0.507);
+  padding: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 710px) {
+  .container-catalogo {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-item-catalogo {
+    flex: 1 1 100%; /* card ocupa a linha inteira */
+    max-width: 520px; /* limite pra não ficar gigante em phones largos */
+    flex-direction: column; /* imagem em cima, texto embaixo */
+    text-align: center;
+  }
+
+  .image-card {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .image-item {
+    width: 100%;
+  }
+
+  .text-item-catalogo {
+    width: 100%;
+    padding: 0 8px;
+  }
+}
+
+/* suavidade e foco acessível */
+.card-item-catalogo {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+.card-item-catalogo:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}

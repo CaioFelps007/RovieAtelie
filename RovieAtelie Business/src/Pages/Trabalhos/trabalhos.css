@@ -1,0 +1,13 @@
+.title-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+}
+
+.section-trabalhos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

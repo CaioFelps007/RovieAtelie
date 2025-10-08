@@ -1,6 +1,7 @@
 .container-catalogoland {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   flex-direction: row;
@@ -9,7 +10,7 @@
 }
 
 .card-catalogoland {
-  width: 30%;
+  width: 25%;
   height: auto;
   display: flex;
   align-items: center;

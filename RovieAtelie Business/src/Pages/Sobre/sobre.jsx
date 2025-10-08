@@ -7,8 +7,9 @@ function Sobre() {
       <div className="section-header">
         <Header />
       </div>
-
-      <h1>Rovie Sobre</h1>
+      <section className="title-screen">
+        <h1>Rovie Sobre</h1>
+      </section>
     </div>
   );
 }
