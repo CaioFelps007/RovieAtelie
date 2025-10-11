@@ -13,7 +13,7 @@ import Footer from "../../components/Footer/footer";
 import CatalogBreve from "../../components/CatalogBreve/catalogobreve";
 
 //images
-import RovieAtelieLogo from "../../images/RovieAteliê.png";
+import RovieAtelieLogo from "../../images/RovieAtelieLogo.png";
 import VilaFlora from "../../images/vilaflora.png";
 import divisao from "../../images/DivisaoImage.png";
 import certificado from "../../images/certificado.png";

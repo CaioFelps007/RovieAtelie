@@ -60,10 +60,9 @@
   justify-content: center;
 }
 .LogoRovie {
-  height: 500px;
-  width: 80%;
+  height: auto;
+  width: 37%;
   margin-bottom: 50px;
-
   animation: fadeIn 1.5s ease forwards, float 6s ease-in-out infinite;
 }
 
@@ -82,7 +81,7 @@
   }
   50% {
     transform: translateY(-8px);
-    filter: drop-shadow(6px 5px 4px rgba(0, 0, 0, 0.74));
+    filter: drop-shadow(6px 5px 4px rgba(0, 0, 0, 0.363));
   }
   100% {
     transform: translateY(0px);
