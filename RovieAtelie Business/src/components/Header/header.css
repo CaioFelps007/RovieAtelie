@@ -36,7 +36,7 @@
 .header-rotas a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: 0.5px;
   position: relative;
@@ -67,7 +67,7 @@
 /* ===== LINK CENTRAL (INÍCIO) ===== */
 #link-home {
   font-family: "Tangerine", cursive;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: 1.5px;
@@ -93,7 +93,7 @@
   }
 
   .header-rotas a {
-    font-size: 1rem;
+    font-size: 1.17rem;
   }
 
   #link-home {

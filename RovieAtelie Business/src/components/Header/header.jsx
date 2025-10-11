@@ -15,7 +15,7 @@ function Header() {
           </li> */}
           <li>
             <Link to="/" id="link-home">
-              INíCiO
+              Início
             </Link>
           </li>
           <li>
