@@ -15,8 +15,8 @@ function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/Sobre" element={<Sobre />} />
         <Route path="/Trabalhos" element={<Trabalhos />} />
-        <Route path="/Precos" element={<Preco />} />
-        <Route path="/Contatos" element={<Contatos />} />
+        {/* <Route path="/Precos" element={<Preco />} /> */}
+        {/* <Route path="/Contatos" element={<Contatos />} /> */}
       </Routes>
     </Router>
   );

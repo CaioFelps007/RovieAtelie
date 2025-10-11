@@ -1,6 +1,7 @@
 import React from "react";
 import "./landpage.css";
 import "../../App.css";
+import { useNavigate } from "react-router-dom";
 
 //icons
 import { FaWhatsapp } from "react-icons/fa";
@@ -24,6 +25,8 @@ function Home() {
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="container-landpage">
       <div className="section-header">
@@ -40,7 +43,12 @@ function Home() {
           <CatalogBreve />
         </div>
         <h3>Ver Resultados</h3>
-        <button className="btn-landpagecatalogo">Ver mais...</button>
+        <button
+          className="btn-landpagecatalogo"
+          onClick={() => navigate("/Trabalhos")}
+        >
+          Ver mais...
+        </button>
       </section>
       {/* <div className="divisao-img">
         <img src={divisao} className="imagem-divisao" />

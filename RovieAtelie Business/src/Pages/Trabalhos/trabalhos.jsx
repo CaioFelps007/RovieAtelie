@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../components/Header/header";
 import "./trabalhos.css";
+import Footer from "../../components/Footer/footer";
 
 //components
 import ItemsCatalogo from "../../components/ItemsCatalogo/catalogo";
@@ -17,6 +18,7 @@ function Trabalhos() {
       <section className="section-trabalhos">
         <ItemsCatalogo />
       </section>
+      <Footer />
     </div>
   );
 }

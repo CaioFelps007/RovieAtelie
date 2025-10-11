@@ -90,197 +90,215 @@
   }
 }
 
+/* ===== Catálogo breve (card vitrine) ===== */
 .section-trabalhos-resume {
-  background-color: burlywood;
-  margin-top: 20px;
-  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.74);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 5px;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.images-trabalhos {
-  width: 95%;
-  height: auto;
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
-  padding: 10px;
-  height: 80%;
-}
-
-.btn-landpagecatalogo {
-  width: 150px;
-  height: 35px;
+  width: min(1100px, 94%);
+  margin: 0 auto 24px;
+  background: var(--paper);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 20px;
-  border: none;
+  box-shadow: 0 14px 28px var(--shadow);
+  padding: clamp(14px, 3.2vw, 24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  background-color: burlywood;
+}
+
+.section-trabalhos-resume h3 {
+  font-size: clamp(18px, 2.4vw, 22px);
+  letter-spacing: 0.3px;
+  color: #2a241e;
+}
+
+/* galeria com moldura leve */
+.images-trabalhos {
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  padding: clamp(8px, 1.8vw, 14px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Botão CTA */
+.btn-landpagecatalogo {
+  margin-top: 4px;
+  border: 1px solid var(--accent);
+  background: linear-gradient(#fff, #fffef7);
+  color: #3a2f25;
+  width: 180px;
+  height: 42px;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
   cursor: pointer;
-  margin-bottom: 15px;
-  background-color: white;
-  transition: 0.2s all;
-  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 8px 16px var(--shadow);
 }
 .btn-landpagecatalogo:hover {
-  background-color: lightgray;
-  width: 160px;
-  height: 37px;
-  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.9);
-  font-size: 1rem;
+  transform: translateY(-1px);
+  background: linear-gradient(#fffef9, #fff7ee);
+  box-shadow: 0 10px 20px var(--shadow-2);
+}
+.btn-landpagecatalogo:active {
+  transform: translateY(0);
 }
 
+/* ===== “Quem sou eu?” ===== */
+.bibliografia {
+  width: min(1100px, 94%);
+  margin: 16px auto 0;
+  background: var(--paper);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 18px;
+  padding: clamp(18px, 4vw, 28px);
+  box-shadow: 0 12px 24px var(--shadow);
+}
+.bibliografia h2 {
+  font-size: clamp(22px, 3vw, 28px);
+  margin-bottom: 6px;
+}
+.bibliografia p {
+  color: var(--muted);
+  font-size: clamp(15px, 2vw, 17px);
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+/* ===== Localização (layout 2 colunas → empilha no mobile) ===== */
 .localizacao {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  margin-top: 20px;
-  background-color: rgba(255, 255, 255, 0.342);
-  border-radius: 20px;
-  margin: 10px;
+  width: min(1100px, 94%);
+  margin: 16px auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(14px, 3vw, 24px);
+  background: var(--paper);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 18px;
+  padding: clamp(16px, 3.5vw, 24px);
+  box-shadow: 0 12px 24px var(--shadow);
 }
 
 .text-localizacao {
-  width: 60%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  border-right: black 1px solid;
-  height: 300px;
   text-align: center;
+  padding: clamp(8px, 1.8vw, 12px);
+  border-right: 1px dashed rgba(0, 0, 0, 0.12);
 }
-
 .text-localizacao h2 {
-  font-size: 2.3rem;
+  font-size: clamp(20px, 2.6vw, 26px);
+  margin-bottom: 8px;
+}
+.text-localizacao p {
+  color: var(--muted);
+  font-size: clamp(15px, 1.9vw, 17px);
 }
 
 .img-localizacao {
-  width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .imgVila {
+  width: min(520px, 100%);
   height: auto;
-  width: 70%;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 20px var(--shadow);
 }
 
-.bibliografia {
-  margin: 20px;
-  align-items: flex-start;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  height: 300px;
-}
-
-.bibliografia h2 {
-  font-size: 2.4rem;
-}
-
-.bibliografia p {
-  margin-top: 15px;
-}
-
-.divisao-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 600px;
-}
-
-.imagem-divisao {
-  height: auto;
-  width: 90%;
-}
-
-@media (max-width: 830px) {
-  .divisao-img {
-    height: 100px;
+@media (max-width: 860px) {
+  .localizacao {
+    grid-template-columns: 1fr;
+  }
+  .text-localizacao {
+    border-right: 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.12);
+    padding-bottom: 16px;
   }
 }
 
+/* ===== Certificados (vitrine) ===== */
 .Certificados {
+  width: min(1100px, 94%);
+  margin: 24px auto 28px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  gap: 100px;
-  margin-top: 100px;
-  margin-bottom: 25px;
+  align-items: center;
+  gap: 18px;
 }
-
 .Certificados h1 {
-  font-size: 2.5rem;
+  font-size: clamp(22px, 3vw, 28px);
 }
 
 .certificados-links {
-  background-color: midnightblue;
-  width: 60%;
-  height: 400px;
+  width: 100%;
+  min-height: 260px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
-  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.74);
-  margin-bottom: 50px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #ffffff;
+  box-shadow: 0 10px 22px var(--shadow);
+  padding: clamp(10px, 2.6vw, 18px);
 }
-
 .img-certificado {
+  width: min(720px, 92%);
   height: auto;
-  width: 60%;
-  border-radius: 20px;
-  box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.74);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
 }
 
-@media (max-width: 800px) {
-  .certificados-links {
-    width: 100%;
-    height: 300px;
-  }
-}
-
+/* ===== Botão WhatsApp flutuante (mais refinado) ===== */
 .whats-button {
   position: fixed;
-  z-index: 10;
+  right: 16px;
+  bottom: 16px;
+  z-index: 20;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background-color: green;
-  height: 70px;
-  width: 70px;
-  border: none;
-  bottom: 15px;
-  right: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #25d366;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* opcional: sombra para dar destaque */
-  animation: bounceGlow 1.5s infinite; /* aplica animação */
-  transition: all 0.3s ease; /* suaviza qualquer mudança */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
-
+.whats-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
+}
+.whats-button:active {
+  transform: translateY(0);
+}
 .whats-button svg {
-  color: white;
-  width: 60%;
+  width: 56%;
   height: auto;
 }
 
-@keyframes bounceGlow {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px); /* altura do pulo */
-    box-shadow: 0 0 20px rgb(9, 255, 9); /* brilho mais intenso */
-  }
+/* ===== Pequenas melhorias de tipografia globais nessa página ===== */
+.title-section h1,
+.section-trabalhos-resume h3,
+.bibliografia h2,
+.text-localizacao h2,
+.Certificados h1 {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* ===== A11y: focos visíveis ===== */
+.container-landpage a:focus-visible,
+.container-landpage button:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 3px;
 }

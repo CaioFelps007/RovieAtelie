@@ -1,0 +1,140 @@
+/* ===== Paleta e base ===== */
+:root {
+  --bg: #faf8f4; /* fundo clarinho */
+  --paper: #fffefb; /* cartão */
+  --ink: #2b2b2b; /* texto principal */
+  --muted: #6f6a63; /* texto suave */
+  --accent: #caa06d; /* dourado/bege do seu menu */
+  --accent-2: #e4caa2; /* variação para hover */
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+.section-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: saturate(120%) blur(4px);
+}
+
+.title-screen {
+  text-align: center;
+  padding: clamp(32px, 6vw, 72px) 16px 8px;
+  animation: fadeIn 0.6s ease both;
+}
+
+.title-screen h1 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: clamp(28px, 4.8vw, 48px);
+  color: #1f1b16;
+  position: relative;
+  display: inline-block;
+}
+
+.title-screen h1::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 70%;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+
+.history {
+  max-width: 880px;
+  margin: 18px auto 56px;
+  padding: clamp(20px, 4.5vw, 40px);
+  background: var(--paper);
+  border-radius: 18px;
+  box-shadow: 0 10px 24px var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.7); /* leve “sombra pra dentro” */
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  animation: riseIn 0.55s ease both 0.1s;
+}
+
+.history p {
+  font-size: clamp(16px, 2.2vw, 18px);
+  color: var(--ink);
+  margin: 0;
+}
+
+.history p::first-letter {
+  float: left;
+  font-size: 3.2em;
+  line-height: 0.85;
+  padding-right: 0.08em;
+  padding-top: 0.06em;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Frase de impacto (use <em> em um trecho) */
+.history em {
+  background: linear-gradient(transparent 70%, rgba(202, 160, 109, 0.25) 0);
+  font-style: normal;
+  padding: 0 0.15em;
+  border-radius: 4px;
+}
+
+/* Citação opcional */
+.quote {
+  margin-top: 18px;
+  padding: 14px 16px;
+  font-size: 15px;
+  color: var(--muted);
+  border-left: 3px solid var(--accent);
+  background: rgba(202, 160, 109, 0.06);
+  border-radius: 8px;
+}
+
+/* ===== Acessibilidade e motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== Responsivo extra ===== */
+@media (max-width: 480px) {
+  .history {
+    border-radius: 14px;
+  }
+  .divider {
+    width: 88%;
+  }
+}
+
+.signature {
+  margin-top: 18px;
+  text-align: right;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+}
+.signature::before {
+  content: "—";
+  color: var(--accent);
+}

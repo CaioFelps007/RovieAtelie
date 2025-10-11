@@ -8,11 +8,11 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/Trabalhos">catálogo</Link>
+            <Link to="/Trabalhos">serviços</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/Precos">preços</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/" id="link-home">
               INíCiO
@@ -21,9 +21,9 @@ function Header() {
           <li>
             <Link to="/Sobre">sobre</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/Contatos">contatos</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>
